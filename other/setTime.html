@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Hi kunal</h1>
+        <button id="stop">Stop</button>
+        <button id="interval">Stop interval</button>
+    </div>
+
+    <script>
+        // settimeout
+
+        // setTimeout(function(){
+        //     console.log("JI")
+        // },2000)
+        let count = 0;
+        function k(e){
+            console.log(document.querySelector("h1"))
+            console.log(e)
+            count++
+        }
+        const kunal =  setTimeout(k,3000,"Yo")
+
+        //if we want to clear setTimeont before executing
+       
+        const stop = document.querySelector("#stop")
+        function stopping(e){
+            console.log(e)
+            clearTimeout(kunal)
+        }
+        // stop.addEventListener('click',()=>{
+        //     clearTimeout(kunal)
+        // })
+        stop.addEventListener('click',()=>stopping("Stoping"))
+
+        // SETtimeInterval
+
+        const interval = setInterval(k,1000,"I love Me")
+        function intervalEnd(total){
+            console.log(total)
+            clearInterval(interval)
+        }
+
+        document.querySelector("#interval").addEventListener('click',()=>intervalEnd(`Ending interval ${count}`))
+
+    </script>
+</body>
+</html>

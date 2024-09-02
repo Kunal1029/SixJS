@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const div = document.createElement('div')
+    console.log(div)
+    document.querySelector('body').style.backgroundColor = "black"
+
+    div.id = Math.round(Math.random()*10+1)
+    div.setAttribute("title","mytitle")
+    // div.setAttribute("class","kunal")
+    div.className = "pipi"
+    div.classList.add("kiki")
+    div.style.backgroundColor = "green"
+    div.style.padding = "280px"
+    // div.innerText = "Hi aur by"
+    // or
+    const addText = document.createTextNode("Hi aur Bie")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+  </script>
+</html>

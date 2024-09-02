@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent"><br>
+        <div class="child">A</div> 
+        <div class="child">B</div>
+        <div class="child">C</div>
+        <div class="child">D</div>
+    </div>
+
+    <script>
+        const body = document.querySelector('body')
+        body.style.backgroundColor ="black"
+
+        const parent = document.querySelector('.parent')
+        console.log(parent)
+        console.log(parent.children) //html collection
+        console.log(parent.children[1].innerHTML) 
+        parent.children[1].classList.add('day');
+
+        for(let i = 0;i<parent.children.length; i++){
+            parent.children[i].style.color = "white"
+            console.log(parent.children[i].innerHTML)
+        }
+        console.log(parent.firstElementChild); // full html tag of 1st child
+        console.log(parent.lastElementChild);//full html tag of last child
+       
+        const dayOne = document.querySelector('.day')
+        console.log(dayOne.parentElement)
+        console.log(dayOne.nextElementSibling)
+        console.log(dayOne.previousElementSibling)
+
+        console.log("Nodes : ", parent.childNodes)
+         
+    </script>
+</body>
+
+</html>
